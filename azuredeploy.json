@@ -58,12 +58,9 @@
                     "linuxFxVersion": "DOCKER|cocteau666/mastodon:latest"
                 },
                 "name": "[parameters('name')]",
-                "serverFarmId": "[concat('/subscriptions/', parameters('subscriptionId'),'/resourcegroups/', parameters('serverFarmResourceGroup'), '/providers/Microsoft.Web/serverfarms/', parameters('hostingPlanName'))]",
+                "serverFarmId": "[concat('/subscriptions/', parameters('subscriptionId'),'/resourceGroups/', parameters('serverFarmResourceGroup'), '/providers/Microsoft.Web/serverFarms/', parameters('hostingPlanName'))]",
                 "hostingEnvironment": "[parameters('hostingEnvironment')]"
-            },
-            "dependsOn": [
-                "[concat('Microsoft.Web/serverfarms/', parameters('hostingPlanName'))]"
-            ]
+            }
         }
     ]
 }
